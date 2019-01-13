@@ -1,0 +1,54 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #eee; }
+  .row:not(:last-child) {
+    margin-bottom: 2rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    padding: 3rem 0;
+    text-align: center;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+  .row .col-full {
+    width: 100%;
+    background-color: orange; }
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2);
+    background-color: orangered; }
+    @media (max-width: 767px) {
+      .row .col-1-of-2 {
+        float: none;
+        width: 100%; } }
+  .row .col-1-of-3 {
+    background-color: yellow;
+    width: calc((100% - (3rem * 2)) / 3); }
+  .row .col-1-of-4 {
+    background-color: yellowgreen;
+    width: calc((100% - (3rem * 3)) / 4); }
+  .row .col-2-of-3 {
+    background-color: burlywood;
+    width: calc(((100% - (3rem * 2)) / 3) * 2 + 3rem); }
+  .row .col-2-of-4 {
+    background-color: deeppink;
+    width: calc(((100% - (3rem * 3)) / 4) * 2 + 3rem); }
+
+.header-wrapper {
+  height: 80vh;
+  background-image: url("../images/img6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }

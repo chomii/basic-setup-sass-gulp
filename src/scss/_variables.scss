@@ -1,0 +1,17 @@
+// COLORS
+
+// GRID
+
+$grid-width: 114rem;
+$grid-horizontal-gutter: 2rem;
+$grid-vertical-gutter: 3rem;
+
+// RESPONSIVE
+
+$breakpoints: (
+  'small'  : ( max-width:  767px ),
+  'medium' : ( max-width:  992px ),
+  'large'  : ( max-width: 1200px )
+);
+
+// FONT

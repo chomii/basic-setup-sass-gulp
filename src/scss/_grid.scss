@@ -1,0 +1,60 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    background-color: #eee;
+
+    &:not(:last-child) {
+        margin-bottom: $grid-horizontal-gutter;
+    }
+
+    @include clearfix;
+    
+    [class^="col-"] {
+        padding: 3rem 0;
+        text-align: center;
+        float:left;
+
+        &:not(:last-child) {
+            margin-right: $grid-vertical-gutter;
+        }
+    }
+
+    .col-full {
+        width: 100%;
+        background-color: orange;
+        
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$grid-vertical-gutter}) / 2);
+        background-color: orangered;
+
+        @include respond-to(small) {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .col-1-of-3 {
+        background-color: yellow;
+        width: calc((100% - (#{$grid-vertical-gutter} * 2)) / 3);
+
+        
+    }
+    
+    .col-1-of-4 {
+        background-color: yellowgreen;
+        width: calc((100% - (#{$grid-vertical-gutter} * 3)) / 4);
+    }
+
+    .col-2-of-3 {
+        background-color: burlywood;
+        width: calc(((100% - (#{$grid-vertical-gutter} * 2)) / 3) * 2 + #{$grid-vertical-gutter});
+    }
+
+    .col-2-of-4 {
+        background-color: deeppink;
+        width: calc(((100% - (#{$grid-vertical-gutter} * 3)) / 4) * 2 + #{$grid-vertical-gutter});
+    }
+
+}
