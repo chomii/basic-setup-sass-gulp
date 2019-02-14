@@ -1,17 +1,31 @@
 // COLORS
+$color-primary-red: #e40513;
 
 // GRID
 
-$grid-width: 114rem;
+$grid-width: 117rem;
 $grid-horizontal-gutter: 2rem;
 $grid-vertical-gutter: 3rem;
 
 // RESPONSIVE
 
 $breakpoints: (
-  'small'  : ( max-width:  767px ),
+  'small'  : ( max-width:  768px ),
   'medium' : ( max-width:  992px ),
   'large'  : ( max-width: 1200px )
 );
 
 // FONT
+$font-plex-sans-regular : "IBMPlexSans-Regular", sans-serif;
+$font-plex-sans-bold : "IBMPlexSans-Bold", sans-serif;
+$font-plex-sans-bold-italic : "IBMPlexSans-BoldItalic", sans-serif;
+$font-plex-sans-italic : "IBMPlexSans-Italic", sans-serif;
+$font-plex-sans-semi-bold : "IBMPlexSans-SemiBold", sans-serif;
+$font-plex-sans-semi-bold-italic : "IBMPlexSans-SemiBoldItalic", sans-serif;
+
+$font-muller-narrow-extra-bold : "MullerNarrow-ExtraBold", sans-serif;
+$font-muller-narrow-extra-bold-italic : "MullerNarrow-ExtraBoldItalic", sans-serif;
+$font-muller-narrow-light : "MullerNarrow-Light", sans-serif;
+$font-muller-narrow-light-italic : "MullerNarrow-LightItalic", sans-serif;
+
+$shadow-text: 1px 1px 2px rgba(150, 150, 150, 1);
