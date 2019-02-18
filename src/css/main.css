@@ -11,13 +11,15 @@ html {
 
 body {
   box-sizing: border-box;
-  font-size: 1.6rem;
-  line-height: 1.7rem; }
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  font-family: "IBMPlexSans-Regular", sans-serif; }
 
 .container {
   display: flex;
   justify-content: center;
-  margin: auto; }
+  margin: auto;
+  padding: 1rem; }
   @media all and (min-width: 1200px) {
     .container {
       width: 117rem; } }
@@ -106,14 +108,52 @@ body {
       margin-right: 1rem; } }
 
 .text-sans-regular {
-  font-family: "IBMPlexSans-Regular", sans-serif;
-  font-size: 2.2rem;
-  line-height: 2rem; }
+  font-family: "IBMPlexSans-Regular", sans-serif; }
 
 .text-sans-semi-bold {
-  font-family: "IBMPlexSans-SemiBold", sans-serif;
-  font-size: 2.2rem;
-  line-height: 2rem; }
+  font-family: "IBMPlexSans-SemiBold", sans-serif; }
+
+.order-button {
+  width: 30rem; }
+  .order-button a img {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.mb-3 {
+  margin-bottom: 3rem; }
+
+.custom-list-style {
+  padding: 3rem 0; }
+  @media (max-width: 992px) {
+    .custom-list-style {
+      width: 80%; } }
+  .custom-list-style li {
+    list-style: none;
+    font-family: "IBMPlexSans-Regular", sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    display: flex;
+    text-align: left; }
+    @media (max-width: 992px) {
+      .custom-list-style li {
+        font-size: 2rem; } }
+    .custom-list-style li:not(:last-child) {
+      margin-bottom: 1.5rem; }
+  .custom-list-style .icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    color: #e40513;
+    content: "\f058";
+    margin-right: 2rem; }
+    @media (max-width: 992px) {
+      .custom-list-style .icon::before {
+        margin-right: 1rem; } }
 
 .navbar {
   display: flex;
@@ -170,20 +210,11 @@ body {
         display: flex;
         width: 40%;
         align-items: flex-start; } }
-  .navbar .order-button {
-    width: 20rem;
-    height: 4rem; }
-    @media (max-width: 1200px) {
-      .navbar .order-button {
-        display: none; } }
-    .navbar .order-button-left {
-      padding: 1rem 0.5rem; }
-      .navbar .order-button-left p {
-        font-size: 2.3rem; }
-    .navbar .order-button-right {
-      padding: 1rem; }
-      .navbar .order-button-right::after {
-        font-size: 2.5rem; }
+    .navbar .navbar-items .order-button {
+      width: auto; }
+      .navbar .navbar-items .order-button a img {
+        display: block;
+        width: 80%; }
 
 .header-wrapper {
   background-image: url("../images/model.png");
@@ -435,44 +466,6 @@ body {
       color: #e40513;
       content: "\f058";
       margin-right: 2rem; }
-
-.order-button {
-  display: flex;
-  border-radius: 3px;
-  width: 30rem; }
-  .order-button-left {
-    background-image: linear-gradient(to bottom, #ffd136, #ffc72b, #ffbe1f, #ffb412, #ffaa02);
-    padding: 2rem 1rem;
-    width: 80%;
-    border-radius: 3px 0 0 3px;
-    text-align: center; }
-    .order-button-left p {
-      color: white;
-      font-family: "IBMPlexSans-SemiBold", sans-serif;
-      text-transform: uppercase;
-      font-size: 3rem;
-      text-shadow: 1px 1px 2px #969696; }
-  .order-button-right {
-    background-color: #ffbc00;
-    padding: 2rem;
-    width: 20%;
-    border-radius: 0 3px 3px 0;
-    text-align: center; }
-    .order-button-right::after {
-      content: '';
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 4rem;
-      color: white;
-      content: "\f0da";
-      text-shadow: 1px 1px 2px #969696;
-      text-align: center;
-      vertical-align: middle; }
 
 #key-facts-section .key-facts {
   display: flex;
@@ -868,16 +861,6 @@ body {
               transform: rotate(-16deg); }
           #offer-section .offer-wrapper .order-boxes-wrapper .order-box-content-bottom .prices-box .offer-price {
             color: #00274d; }
-        #offer-section .offer-wrapper .order-boxes-wrapper .order-box-content-bottom .order-button {
-          margin: 1rem auto;
-          width: 95%;
-          margin-top: 2rem; }
-          #offer-section .offer-wrapper .order-boxes-wrapper .order-box-content-bottom .order-button p {
-            font-size: 3rem;
-            color: white; }
-            @media (max-width: 992px) {
-              #offer-section .offer-wrapper .order-boxes-wrapper .order-box-content-bottom .order-button p {
-                font-size: 2rem; } }
         #offer-section .offer-wrapper .order-boxes-wrapper .order-box-content-bottom h3 {
           padding: 0.5rem;
           text-align: center;
@@ -1018,6 +1001,400 @@ body {
               display: block;
               margin: auto;
               width: 100%; } }
+
+#ingredients-section {
+  background-color: #f3f8f7;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+  font-size: 2.1rem;
+  line-height: 2.5rem; }
+  @media (max-width: 992px) {
+    #ingredients-section {
+      font-size: 1.8rem;
+      line-height: 2rem; } }
+  @media (max-width: 768px) {
+    #ingredients-section {
+      font-size: 1.6rem;
+      line-height: 2rem; } }
+  #ingredients-section .ingredients-wrapper {
+    margin: 5rem 0; }
+    #ingredients-section .ingredients-wrapper .ingredient-panel {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+      padding-top: 10px; }
+      #ingredients-section .ingredients-wrapper .ingredient-panel h3 {
+        display: inline-block;
+        font-family: "MullerNarrow-ExtraBold", sans-serif;
+        font-size: 54px;
+        margin: 0 0 3rem 0;
+        line-height: 5rem; }
+      #ingredients-section .ingredients-wrapper .ingredient-panel p {
+        font-size: 2.2rem;
+        line-height: 3rem; }
+        @media (max-width: 768px) {
+          #ingredients-section .ingredients-wrapper .ingredient-panel p {
+            font-size: 1.8rem;
+            line-height: 2rem; } }
+    #ingredients-section .ingredients-wrapper .ingredient-formula-panel {
+      background-image: url("../images/rectangle-bckg.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      margin: 3rem 0; }
+      @media (max-width: 768px) {
+        #ingredients-section .ingredients-wrapper .ingredient-formula-panel {
+          background-image: none;
+          margin: 0; } }
+      #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-center-img {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        @media (max-width: 768px) {
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-center-img {
+            display: block;
+            position: static;
+            transform: translate(0, 0);
+            text-align: center;
+            padding-bottom: 4rem; } }
+        @media (max-width: 768px) {
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-center-img img {
+            display: inline-block;
+            width: 25%; } }
+      #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        position: relative; }
+        #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row:nth-child(1n) {
+          top: -3rem; }
+        @media (max-width: 768px) {
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row {
+            flex-direction: column;
+            padding: 0; } }
+        #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item {
+          width: 45%; }
+          @media (max-width: 768px) {
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item:not(:last-child) {
+              padding: 0; } }
+          @media (max-width: 768px) {
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item {
+              width: 100%; } }
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-left {
+            text-align: left; }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-left .header-img {
+              position: relative; }
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-left .header-img::before {
+                content: '';
+                display: block;
+                background-image: url("../images/line.png");
+                background-repeat: no-repeat;
+                height: 1rem;
+                width: 8rem;
+                position: absolute;
+                left: -2rem;
+                bottom: 1rem; }
+                @media (max-width: 768px) {
+                  #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-left .header-img::before {
+                    display: none; } }
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-right {
+            text-align: right; }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-right .header-img {
+              position: relative; }
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-right .header-img::before {
+                content: '';
+                display: block;
+                background-image: url("../images/line.png");
+                background-repeat: no-repeat;
+                height: 1rem;
+                width: 8rem;
+                position: absolute;
+                right: -2rem;
+                bottom: 1rem;
+                transform: rotate(180deg); }
+                @media (max-width: 768px) {
+                  #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-right .header-img::before {
+                    display: none; } }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-right .ingredient-content {
+              margin-left: auto; }
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-narow {
+            width: 40%; }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-narow:not(:last-child) {
+                padding: 1rem 0; } }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item.item-narow {
+                width: 100%; } }
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header {
+            display: flex;
+            justify-content: space-between; }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header {
+                flex-direction: column; } }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-text {
+                order: 2;
+                text-align: center; } }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-text h3 {
+              display: block;
+              padding: 0.5rem; }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-text .extract-text {
+              display: block;
+              padding: 0.5rem;
+              color: #e40513;
+              border-top: 1px solid lightgray;
+              border-bottom: 1px solid lightgray; }
+              @media (max-width: 768px) {
+                #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-text .extract-text {
+                  width: 20rem;
+                  margin: auto; } }
+            #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-img img {
+              display: block;
+              width: 10rem;
+              margin: auto; }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-header .header-img {
+                order: 1; } }
+          #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-content {
+            width: 90%; }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .ingredient-formula-panel .ingredient-row .ingredient-item .ingredient-content {
+                text-align: center;
+                margin: auto; } }
+    #ingredients-section .ingredients-wrapper .bottom-row {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      position: relative;
+      text-align: center; }
+      @media (max-width: 768px) {
+        #ingredients-section .ingredients-wrapper .bottom-row {
+          flex-direction: column;
+          padding: 0; } }
+      #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item {
+        width: 45%;
+        font-size: 2.1rem;
+        line-height: 2.5rem; }
+        @media (max-width: 992px) {
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item {
+            font-size: 1.8rem;
+            line-height: 2rem; } }
+        @media (max-width: 768px) {
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item {
+            width: 100%; } }
+        #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-left .header-img {
+          position: relative;
+          display: inline-block; }
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-left .header-img::before {
+            content: '';
+            display: block;
+            background-image: url("../images/line.png");
+            background-repeat: no-repeat;
+            height: 1rem;
+            width: 8rem;
+            position: absolute;
+            left: 16rem;
+            bottom: 1rem; }
+        #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-right {
+          text-align: right; }
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-right .header-img {
+            position: relative; }
+            #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-right .header-img::before {
+              content: '';
+              display: block;
+              background-image: url("../images/line.png");
+              background-repeat: no-repeat;
+              height: 1rem;
+              width: 8rem;
+              position: absolute;
+              right: 16rem;
+              bottom: 1rem;
+              transform: rotate(180deg); }
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-right .ingredient-content {
+            margin-left: auto; }
+        #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-narow {
+          width: 40%; }
+          @media (max-width: 768px) {
+            #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item.item-narow {
+              width: 100%;
+              padding: 1rem 0; } }
+        #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-header {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center; }
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-header .header-text {
+            display: flex;
+            flex-direction: column;
+            text-align: center; }
+            #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-header .header-text h3 {
+              display: inline-block;
+              padding: 0.5rem; }
+            #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-header .header-text .extract-text {
+              display: inline-block;
+              width: 21rem;
+              margin: auto;
+              padding: 0.5rem;
+              color: #e40513;
+              border-top: 1px solid lightgray;
+              border-bottom: 1px solid lightgray; }
+          #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-header .header-img img {
+            display: block;
+            width: 10rem;
+            margin: auto; }
+        #ingredients-section .ingredients-wrapper .bottom-row .ingredient-item .ingredient-content {
+          width: 80%;
+          margin: auto;
+          text-align: center; }
+    #ingredients-section .ingredients-wrapper .three-things {
+      margin-top: 2rem;
+      text-align: center; }
+      #ingredients-section .ingredients-wrapper .three-things .three-things-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0; }
+        #ingredients-section .ingredients-wrapper .three-things .three-things-wrapper .three-things-item {
+          padding: 1rem;
+          width: 30%; }
+          #ingredients-section .ingredients-wrapper .three-things .three-things-wrapper .three-things-item img {
+            display: block;
+            margin: auto; }
+            @media (max-width: 768px) {
+              #ingredients-section .ingredients-wrapper .three-things .three-things-wrapper .three-things-item img {
+                width: 70%; } }
+          #ingredients-section .ingredients-wrapper .three-things .three-things-wrapper .three-things-item p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6rem;
+            color: #e40513;
+            font-family: "IBMPlexSans-Bold", sans-serif; }
+      #ingredients-section .ingredients-wrapper .three-things .order-button {
+        margin: auto;
+        margin-top: 2rem; }
+
+#big-three-section {
+  background-color: white; }
+  #big-three-section .big-three {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center; }
+    #big-three-section .big-three .big-three-wrapper {
+      background-image: url("../images/separator-triangle.png");
+      background-position: top;
+      background-repeat: no-repeat; }
+      #big-three-section .big-three .big-three-wrapper .big-three-items {
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+        margin-bottom: 3rem; }
+        @media (max-width: 768px) {
+          #big-three-section .big-three .big-three-wrapper .big-three-items {
+            flex-direction: column;
+            align-items: center; } }
+        #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item {
+          width: 30%;
+          max-width: 30rem; }
+          @media (max-width: 768px) {
+            #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item {
+              width: 80%;
+              max-width: 40rem; } }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item:not(:last-child) {
+            margin-right: 2rem; }
+            @media (max-width: 768px) {
+              #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 2rem; } }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item:nth-child(1) .item-top {
+            background-color: #f9f3dc; }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item:nth-child(2) .item-top {
+            background-color: #ebf6f9; }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item:nth-child(3) .item-top {
+            background-color: #f1fcf5; }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item .item-top {
+            height: 22rem;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+          #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item .item-bottom {
+            padding: 1rem;
+            background-color: #e40513;
+            color: white;
+            font-size: 3.6rem;
+            line-height: 3rem;
+            font-family: "MullerNarrow-ExtraBold", sans-serif;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            @media (max-width: 992px) {
+              #big-three-section .big-three .big-three-wrapper .big-three-items .big-three-item .item-bottom {
+                font-size: 3rem; } }
+
+.big-three-section-2.circulation {
+  background-color: #ebf6f9; }
+
+.big-three-section-2 p:not(:last-child) {
+  margin-bottom: 3rem; }
+
+.big-three-section-2 .big-three-2 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 3rem 2rem; }
+  .big-three-section-2 .big-three-2 .big-three-2-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2rem; }
+    @media (max-width: 992px) {
+      .big-three-section-2 .big-three-2 .big-three-2-header {
+        justify-content: center; } }
+    .big-three-section-2 .big-three-2 .big-three-2-header img {
+      display: inline-block; }
+    .big-three-section-2 .big-three-2 .big-three-2-header h3 {
+      display: inline-block;
+      font-size: 3rem; }
+  .big-three-section-2 .big-three-2 .big-three-2-main-content {
+    padding-top: 3rem;
+    display: flex; }
+    @media (max-width: 992px) {
+      .big-three-section-2 .big-three-2 .big-three-2-main-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0; } }
+    .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 40%; }
+      .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-img.testosterone {
+        background-image: url("../images/man-weight.png"); }
+      .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-img.circulation {
+        background-image: url("../images/circulation.png"); }
+        @media (max-width: 992px) {
+          .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-img.circulation {
+            order: 1;
+            margin-bottom: 3rem; } }
+      @media (max-width: 992px) {
+        .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-img {
+          height: 50rem;
+          width: 100%;
+          background-size: contain; } }
+    .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-text {
+      width: 60%; }
+      @media (max-width: 992px) {
+        .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-text {
+          width: 100%;
+          text-align: center;
+          order: 2; } }
+      @media (max-width: 992px) {
+        .big-three-section-2 .big-three-2 .big-three-2-main-content .big-three-2-main-text .custom-list-style {
+          margin: auto; } }
 
 @font-face {
   font-family: 'IBMPlexSans-Regular';
